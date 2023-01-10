@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  demo:
+    image: demo
+    # environment:
+    #   - SPRING_PROFILES_ACTIVE=hirist-production
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 9002:9001
