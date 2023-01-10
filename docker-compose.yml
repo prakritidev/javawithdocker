@@ -7,6 +7,6 @@ services:
     #   - SPRING_PROFILES_ACTIVE=hirist-production
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: .12factor/Dockerfile
     ports:
       - 9002:9001
