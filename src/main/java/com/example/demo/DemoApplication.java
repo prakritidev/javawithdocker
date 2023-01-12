@@ -30,15 +30,22 @@ class Controller {
 	
 	@GetMapping(value = "/env")
 	public String getDataString() {
-		
+
 		Properties prop = System.getProperties();
 		for (Object key : prop.keySet()) {
 			String temp = (key + ": " + prop.getProperty(key.toString()));
 			System.out.println(temp);
 
 		}
-		
+
 		return "Hirst env: " + elasticString + " || application env : " + elasticApplication;
+
+	}
+	
+	@GetMapping(value = "/")
+	public String getRoot() {
+		
+		return "working";
 		
 	}
 }
